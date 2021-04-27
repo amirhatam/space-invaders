@@ -29,7 +29,7 @@ class App extends React.Component {
       // Le spaceship est au départ sur la colonne 23, au milieu.
       spaceshipPositionColumn: 23,
 
-      noTouchYet: true,
+     
 
       beginning: true,
       lostGame: false,
@@ -69,16 +69,16 @@ class App extends React.Component {
         this.moveForwardAlien()
         this.setState({
           spaceshipPositionColumn: this.state.spaceshipPositionColumn + 1,
-          noTouchYet: false
+         
         })
       } else if (e.keyCode === 37) {
         this.moveForwardAlien()
         this.setState({
           spaceshipPositionColumn: this.state.spaceshipPositionColumn - 1,
-          noTouchYet: false
+         
         })
       } else if (e.keyCode === 32 && this.state.displayBullet === 'none') {
-        this.setState({ noTouchYet: false })
+       
         this.bulletShot();
         this.moveForwardAlien()
       } else {
